@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEZ Watchparty</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🎬 TEZ Watchparty</h1>
+
+      <section id="authSection" class="card">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input id="loginUser" placeholder="Usuário" required />
+          <input id="loginPass" type="password" placeholder="Senha" required />
+          <button type="submit">Entrar</button>
+        </form>
+
+        <h3>Criar conta</h3>
+        <form id="registerForm">
+          <input id="registerUser" placeholder="Usuário" required />
+          <input id="registerPass" type="password" placeholder="Senha (mín. 4)" required />
+          <button type="submit">Cadastrar</button>
+        </form>
+        <p id="authMessage" class="message"></p>
+      </section>
+
+      <section id="appSection" class="hidden">
+        <div class="card">
+          <p>Logado como <strong id="currentUser"></strong></p>
+          <div class="row">
+            <input id="roomCode" placeholder="Código da sala (ex: FILME123)" />
+            <button id="joinRoomBtn">Entrar na sala</button>
+          </div>
+          <p id="roomInfo" class="message"></p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h2>Player sincronizado</h2>
+            <div class="row">
+              <input id="videoUrl" placeholder="URL direta do vídeo (.mp4)" />
+              <button id="setVideoBtn">Definir vídeo</button>
+            </div>
+            <video id="videoPlayer" controls></video>
+          </div>
+
+          <div class="card chat">
+            <h2>Chat</h2>
+            <div id="chatMessages" class="chat-box"></div>
+            <form id="chatForm" class="row">
+              <input id="chatInput" placeholder="Digite uma mensagem" />
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
