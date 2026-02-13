@@ -1,0 +1,10 @@
+{
+  "name": "tez-watchparty",
+  "version": "1.0.0",
+  "description": "Watchparty web app with login and chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  }
+}
